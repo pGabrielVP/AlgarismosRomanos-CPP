@@ -78,8 +78,8 @@ std::string toRoman(long numero) {
 
 int main(int argc, char* argv[]) {
 	if (argc < 2) {
-		std::cout << "Uso: " << argv[0] << "<decimal>" << std::endl;
-		std::cout << "Uso: " << argv[0] << "<string>" << std::endl;
+		std::cout << "Uso: " << argv[0] << " <decimal>" << std::endl;
+		std::cout << "Uso: " << argv[0] << " <string>" << std::endl;
 		return 1;
 	}
 	std::smatch base_match;
@@ -108,5 +108,6 @@ int main(int argc, char* argv[]) {
 	}
 	return 0;
 }
+
 
 
