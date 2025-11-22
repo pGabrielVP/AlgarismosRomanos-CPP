@@ -19,7 +19,7 @@ std::map<std::string, int> ROMAN_DECIMAL_MAP = { {"I", 1},
 												{"_C", 100000},
 												{"_D", 500000},
 												{"_M", 1000000} };
-std::regex VALID_ALGARISMS_REGEX("(_M){0,3}((_C_M)|(_C_D)|(_D)?(_C){0,3})((_X_C)|(_X_L)|(_L)?(_X){0,3})((_I_X)|(_I_V)|(_V)?)M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})");
+std::regex VALID_ALGARISMS_REGEX("(_M){0,3}((_C_M)|(_C_D)|(_D)?(_C){0,3})((_X_C)|(_X_L)|(_L)?(_X){0,3})((_I_X)|(_I_V)|(_V)?)M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})", std::regex_constants::icase);
 std::string SIMBOLOS[] = {"_M", "_C_M", "_D", "_C_D", "_C", "_X_C", "_L", "_X_L", "_X", "_I_X", "_V", "_I_V", "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
 int VALORES[] = {1000000, 900000, 500000, 400000, 100000, 90000, 50000, 40000, 10000, 9000, 5000, 4000, 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
 
@@ -72,22 +72,23 @@ std::string toRoman(long numero) {
 			resultado = resultado + SIMBOLOS[i];
 		}
 	}
-	
+
 	return resultado;
 }
 
 int main(int argc, char* argv[]) {
 	if (argc < 2) {
-		std::cout << "Uso: " << argv[0] << " <decimal>" << std::endl;
-		std::cout << "Uso: " << argv[0] << " <string>" << std::endl;
+		std::cout << "Para converter para romano: " << argv[0] << " <decimal>" << std::endl;
+        std::cout << "Para converter para decimal: " << argv[0] << " <string>" << std::endl;
+        std::cout << "Suporta algarismos romanos acima de 3999 usando _ (underscore). " << "E.g. _X_LMMLXIX" << std::endl;
 		return 1;
 	}
 	std::smatch base_match;
 	if (std::regex_match(argv[1], VALID_ALGARISMS_REGEX)) {
 		std::cout << toDecimal(argv[1]) << std::endl;
 		return 0;
-	} 
-	
+	}
+
 	long decimal;
 	try {
 		decimal = std::stoi(argv[1]);
@@ -100,7 +101,7 @@ int main(int argc, char* argv[]) {
 		std::cerr << "Integer out of range." << std::endl;
 		return 1;
 	}
-	
+
 	if (0 < decimal < 3999999) {
 		std::cout << toRoman(decimal) << std::endl;
 	} else {
@@ -108,6 +109,3 @@ int main(int argc, char* argv[]) {
 	}
 	return 0;
 }
-
-
-
