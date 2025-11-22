@@ -78,7 +78,7 @@ std::string toRoman(long numero) {
 
 int main(int argc, char* argv[]) {
 	if (argc < 2) {
-		std::cout << "Passe um número para ser convertido como argumento" << std::endl;
+		std::cout << "Passe o nÃºmero a ser convertido como um argumento" << std::endl;
 		return 1;
 	}
 	std::smatch base_match;
@@ -92,7 +92,7 @@ int main(int argc, char* argv[]) {
 		decimal = std::stoi(argv[1]);
 	}
 	catch (const std::invalid_argument& e) {
-		std::cerr << "Número inválido" << std::endl;
+		std::cerr << "NÃºmero invÃ¡lido" << std::endl;
 		return 1;
 	}
 	catch (const std::out_of_range& e) {
@@ -103,7 +103,8 @@ int main(int argc, char* argv[]) {
 	if (0 < decimal < 3999999) {
 		std::cout << toRoman(decimal) << std::endl;
 	} else {
-		std::cout << "Valor inválido" << std::endl;
+		std::cout << "Valor invÃ¡lido" << std::endl;
 	}
 	return 0;
 }
+
