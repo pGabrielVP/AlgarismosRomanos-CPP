@@ -1,6 +1,7 @@
 # AlgarismosRomanos-CPP
 
 execute usando
+
  `./output <numero>` para converter um número decimal para algarismos romanos
  
  `./output <numero>` para converter algarismos romanos para um número decimal
