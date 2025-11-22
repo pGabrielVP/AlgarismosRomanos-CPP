@@ -102,10 +102,11 @@ int main(int argc, char* argv[]) {
 		return 1;
 	}
 
-	if (0 < decimal < 3999999) {
+	if (0 < decimal && decimal <= 3999999) {
 		std::cout << toRoman(decimal) << std::endl;
 	} else {
 		std::cout << "Valor inválido" << std::endl;
 	}
 	return 0;
 }
+
