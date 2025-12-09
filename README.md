@@ -1,14 +1,23 @@
 # AlgarismosRomanos-CPP
 
 - [Compilando](#compilando)
+	- [Windows](#windows)
 	- [Linux](#linux)
 - [Uso](#uso)
 
 ## Compilando
 
+### Windows
+
+#### Visual Studio Build Tools 2022
+ 
+ Powershell de Desenvolvedor ` cl /EHsc /std:c++17 .\conversores\DeRomano.cpp .\conversores\ParaRomano.cpp .\Main.cpp /Feout.exe `
+
 ### Linux
 
- Executa o código no terminal ` c++ conversores/ParaRomano.cpp conversores/DeRomano.cpp Main.cpp -o out.o ` 
+#### g++
+
+ No terminal ` g++ conversores/ParaRomano.cpp conversores/DeRomano.cpp Main.cpp -o out.o ` 
 
 ## Uso
 
