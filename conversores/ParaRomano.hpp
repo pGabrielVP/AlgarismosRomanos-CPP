@@ -1,0 +1,14 @@
+#include <string>
+#include <string_view>
+
+#ifndef ParaRomano_H
+#define ParaRomano_H
+
+class ParaRomano {
+	public:
+		constexpr inline static std::string_view SIMBOLOS[] = { "_M", "_C_M", "_D", "_C_D", "_C", "_X_C", "_L", "_X_L", "_X", "_I_X", "_V", "_I_V", "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
+		constexpr inline static int VALORES[] = { 1000000, 900000, 500000, 400000, 100000, 90000, 50000, 40000, 10000, 9000, 5000, 4000, 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
+		static std::string DeLong(unsigned long numToConvert);
+};
+
+#endif
