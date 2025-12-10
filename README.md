@@ -23,7 +23,7 @@
 
  `./out.o <numero>` para converter um número decimal para algarismos romanos
  
- `./out.o <numero>` para converter algarismos romanos para um número decimal
+ `./out.o <string>` para converter algarismos romanos para um número decimal
 
 O algoritmo suporta numeros maiores que 3999 usando _ (underscore). Eg. _XX retorna 10010
 
