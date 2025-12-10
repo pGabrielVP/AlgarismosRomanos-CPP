@@ -1,12 +1,9 @@
 #include "DeRomano.hpp"
 
-#include <string>
-#include <cctype>
-#include <algorithm>
+#include <string_view>
 
-unsigned long DeRomano::paraLong(std::string algarismos) {
-	std::transform(algarismos.begin(), algarismos.end(), algarismos.begin(), ::toupper);
-	long total = 0;
+unsigned long DeRomano::paraLong(std::string_view algarismos) {
+	unsigned long total = 0;
 	for (int i = 0; i < algarismos.size(); i++)
 	{
 		if (algarismos.at(i) == '_' && i + 3 < algarismos.size() && algarismos.at(i + 2) == '_') {
