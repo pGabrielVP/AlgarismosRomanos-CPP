@@ -11,13 +11,13 @@
 
 #### Visual Studio Build Tools 2022
  
- Powershell de Desenvolvedor ` cl /EHsc /std:c++17 .\conversores\DeRomano.cpp .\conversores\ParaRomano.cpp .\Main.cpp /Feout.exe `
+ Powershell de Desenvolvedor ` cl /EHsc /std:c++20 .\conversores\DeRomano.cpp .\conversores\ParaRomano.cpp .\Main.cpp /Feout.exe `
 
 ### Linux
 
 #### g++
 
- No terminal ` g++ conversores/ParaRomano.cpp conversores/DeRomano.cpp Main.cpp -o out.o ` 
+ No terminal `  g++ -std=c++20 conversores/ParaRomano.cpp conversores/DeRomano.cpp Main.cpp -o out.o ` 
 
 ## Uso
 
