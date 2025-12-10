@@ -27,7 +27,7 @@ int main(int argc, char* argv[]) {
 	
 	int32_t decimal;
 	try {
-		decimal = std::stoi(argv[1]);
+		decimal = std::stoi(argv[1], nullptr, 0);
 	}
 	catch (const std::invalid_argument& e) {
 		std::cerr << "Valor inválido" << std::endl;
