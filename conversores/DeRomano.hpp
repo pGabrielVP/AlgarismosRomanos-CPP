@@ -1,4 +1,5 @@
 #include <string_view>
+#include <cstdint>
 #include <unordered_map>
 
 #ifndef DeRomano_H
@@ -32,7 +33,7 @@ class DeRomano {
 																							{"_D", 500000},
 																							{"_C_M", 900000},
 																							{"_M", 1000000} };
-		static unsigned long paraLong(std::string_view algarismos);
+		static uint32_t paraLong(std::string_view algarismos);
 };
 
 #endif

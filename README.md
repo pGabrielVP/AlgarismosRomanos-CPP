@@ -17,7 +17,7 @@
 
 #### g++
 
- No terminal `  g++ -std=c++20 conversores/ParaRomano.cpp conversores/DeRomano.cpp Main.cpp -o out.o ` 
+ No terminal ` g++ -std=c++20 conversores/ParaRomano.cpp conversores/DeRomano.cpp Main.cpp -o out.o ` 
 
 ## Uso
 

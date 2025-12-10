@@ -1,9 +1,10 @@
 #include "DeRomano.hpp"
 
+#include <cstdint>
 #include <string_view>
 
-unsigned long DeRomano::paraLong(std::string_view algarismos) {
-	unsigned long total = 0;
+uint32_t DeRomano::paraLong(std::string_view algarismos) {
+	uint32_t total = 0;
 	size_t indiceCaractereAtual = 0;
 	while (indiceCaractereAtual < algarismos.length()) {
 		bool vinculumPair = algarismos.at(indiceCaractereAtual) == '_'

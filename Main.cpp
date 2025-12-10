@@ -4,6 +4,7 @@
 #include <regex>
 #include <cctype>
 #include <string>
+#include <cstdint>
 #include <iostream>
 #include <algorithm>
 
@@ -24,9 +25,9 @@ int main(int argc, char* argv[]) {
 		return 0;
 	}
 	
-	long decimal;
+	int32_t decimal;
 	try {
-		decimal = std::stol(argv[1]);
+		decimal = std::stoi(argv[1]);
 	}
 	catch (const std::invalid_argument& e) {
 		std::cerr << "Valor inválido" << std::endl;
